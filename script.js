@@ -595,6 +595,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ==========================================
+     13. FAQ Accordion Toggle
+     ========================================== */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (questionBtn) {
+      questionBtn.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          questionBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
   console.log('%c🚀 DJK Website Ready with Estimator & Modal Detail!', 'color:#FF3EA5;font-size:1.2rem;font-weight:bold;');
   console.log('%c📞 WA: 085695952646 | 📧 dinamikajayakreatif@gmail.com', 'color:#2563EB;');
 });
