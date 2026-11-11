@@ -307,8 +307,9 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Font Awesome (Async Non-Blocking) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" /></noscript>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -496,7 +497,7 @@
         <div class="bio-badge-wrapper">
           <div class="bio-main-badge">
             <div class="bio-img-container">
-              <img src="images/company-bio.png" alt="Company Profile DJK Merchandise" class="bio-real-img"  loading="lazy" decoding="async" />
+              <img src="images/company-bio.jpg" alt="Company Profile DJK Merchandise" class="bio-real-img"  loading="lazy" decoding="async" />
               <div class="bio-img-overlay">
                 <span class="bio-img-caption">CV. Dinamika Jaya Kreatif</span>
               </div>
@@ -678,7 +679,7 @@
 
     <!-- Banner Foto Produk Utama -->
     <div class="product-banner" data-aos="fade-up" data-aos-delay="50">
-      <img src="images/product-main.png" alt="DJK Product Collection — Percetakan, T-Shirt, Merchandise"  loading="lazy" decoding="async" />
+      <img src="images/product-main.jpg" alt="DJK Product Collection — Percetakan, T-Shirt, Merchandise"  loading="lazy" decoding="async" />
       <div class="product-banner-overlay">
         <a href="#estimator" class="btn-primary" style="margin-right: 10px;">
           <i class="fas fa-calculator"></i> Hitung Estimasi Biaya
@@ -943,7 +944,7 @@
             </div>
             <div class="form-group">
               <label for="estProduct"><i class="fas fa-box text-blue"></i> Item Produk</label>
-              <select id="estProduct">
+              <select id="estProduct" aria-label="Pilih Item Produk">
                 <!-- Diisi otomatis oleh JavaScript -->
               </select>
             </div>
@@ -953,16 +954,16 @@
             <div class="form-group">
               <label for="estQty"><i class="fas fa-sort-numeric-up text-pink"></i> Jumlah Pesanan (Pcs / Paket)</label>
               <div class="qty-stepper">
-                <button type="button" id="btnQtyMinus"><i class="fas fa-minus"></i></button>
-                <input type="number" id="estQty" value="50" min="10" step="5" />
-                <button type="button" id="btnQtyPlus"><i class="fas fa-plus"></i></button>
+                <button type="button" id="btnQtyMinus" aria-label="Kurangi jumlah pesanan"><i class="fas fa-minus"></i></button>
+                <input type="number" id="estQty" value="50" min="10" step="5" aria-label="Jumlah Pesanan" />
+                <button type="button" id="btnQtyPlus" aria-label="Tambah jumlah pesanan"><i class="fas fa-plus"></i></button>
               </div>
               <small class="text-muted" id="estMoqHint">Minimal pemesanan: 24 pcs</small>
             </div>
 
             <div class="form-group">
               <label for="estBranding"><i class="fas fa-stamp text-blue"></i> Metode Branding</label>
-              <select id="estBranding">
+              <select id="estBranding" aria-label="Pilih Metode Branding">
                 <option value="0">Standar (Sablon / Printing 1 Sisi)</option>
                 <option value="7000">Bordir Komputer / Laser Engrave (+ Rp 7.000/pcs)</option>
                 <option value="12000">Full Color UV Melingkar (+ Rp 12.000/pcs)</option>
@@ -973,7 +974,7 @@
 
           <div class="form-group">
             <label for="estNotes"><i class="fas fa-edit text-pink"></i> Catatan Tambahan (Ukuran, Warna, Deadline)</label>
-            <input type="text" id="estNotes" placeholder="Contoh: Butuh tanggal 25 bulan ini, logo 2 warna, include box" />
+            <input type="text" id="estNotes" placeholder="Contoh: Butuh tanggal 25 bulan ini, logo 2 warna, include box" aria-label="Catatan Tambahan Pesanan" />
           </div>
 
           <!-- Total Display Box -->
@@ -1070,7 +1071,7 @@
       <div class="pf-display-container">
         <div class="pf-board active" id="pf-board-1">
           <div class="pf-board-img-wrap">
-            <img src="images/portfolio-1.png" alt="Dokumentasi Portofolio DJK 1" class="pf-full-img"  loading="lazy" decoding="async" />
+            <img src="images/portfolio-1.jpg" alt="Dokumentasi Portofolio DJK 1" class="pf-full-img"  loading="lazy" decoding="async" />
             <div class="pf-board-overlay">
               <span><i class="fas fa-camera"></i> Dokumentasi Asli Portfolio Merchandise DJK</span>
               <a href="https://wa.me/6285695952646?text=Halo%20DJK%2C%20saya%20tertarik%20dengan%20produk%20di%20galeri%20portfolio%201" target="_blank" class="btn-wa-sm">
@@ -1082,7 +1083,7 @@
 
         <div class="pf-board" id="pf-board-2">
           <div class="pf-board-img-wrap">
-            <img src="images/portfolio-2.png" alt="Dokumentasi Portofolio DJK 2" class="pf-full-img"  loading="lazy" decoding="async" />
+            <img src="images/portfolio-2.jpg" alt="Dokumentasi Portofolio DJK 2" class="pf-full-img"  loading="lazy" decoding="async" />
             <div class="pf-board-overlay">
               <span><i class="fas fa-camera"></i> Dokumentasi Asli Portfolio Apparel & Souvenir DJK</span>
               <a href="https://wa.me/6285695952646?text=Halo%20DJK%2C%20saya%20tertarik%20dengan%20produk%20di%20galeri%20portfolio%202" target="_blank" class="btn-wa-sm">
@@ -1317,7 +1318,7 @@
     <!-- Official Client Logo Board -->
     <div class="client-board-container" data-aos="fade-up" data-aos-delay="50">
       <div class="client-board-card">
-        <img src="images/our-client.png" alt="Daftar Klien DJK — Permitindo, Metrodata, Yamaha, Kemendagri" class="client-board-img"  loading="lazy" decoding="async" />
+        <img src="images/our-client.jpg" alt="Daftar Klien DJK — Permitindo, Metrodata, Yamaha, Kemendagri" class="client-board-img"  loading="lazy" decoding="async" />
         <div class="client-board-tag">
           <i class="fas fa-handshake"></i> Dokumentasi Klien Resmi CV. Dinamika Jaya Kreatif
         </div>
@@ -1878,20 +1879,20 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Nama Lengkap *</label>
-                <input type="text" id="name" placeholder="Masukkan nama Anda" required />
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Masukkan nama Anda" required />
               </div>
               <div class="form-group">
                 <label for="phone">No. WhatsApp *</label>
-                <input type="tel" id="phone" placeholder="08xx-xxxx-xxxx" required />
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="08xx-xxxx-xxxx" required />
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" placeholder="email@example.com" />
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="email@example.com" />
             </div>
             <div class="form-group">
               <label for="service">Layanan yang Dibutuhkan</label>
-              <select id="service">
+              <select id="service" name="service" aria-label="Pilih Layanan yang Dibutuhkan">
                 <option value="">Pilih layanan...</option>
                 <option>Corporate Merchandise</option>
                 <option>Custom Solution</option>
@@ -1906,7 +1907,7 @@
             </div>
             <div class="form-group">
               <label for="message">Pesan / Detail Kebutuhan</label>
-              <textarea id="message" rows="4" placeholder="Ceritakan kebutuhan Anda (jenis produk, jumlah, deadline, dll.)..."></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Ceritakan kebutuhan Anda (jenis produk, jumlah, deadline, dll.)..." aria-label="Pesan Detail Kebutuhan"></textarea>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-submit" id="btnSubmit">
