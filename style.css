@@ -3468,3 +3468,19 @@ img { max-width: 100%; display: block; }
 .coverage-btn.btn-calc-coverage:hover {
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
+
+/* ============================================================
+   PERFORMANCE & CORE WEB VITALS OPTIMIZATIONS
+   ============================================================ */
+.portfolio,
+.clients,
+.blog,
+.coverage-section,
+.faq-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
+}
+
+img[loading="lazy"] {
+  will-change: auto;
+}
