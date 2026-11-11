@@ -3310,3 +3310,161 @@ img { max-width: 100%; display: block; }
   max-height: 350px;
   padding: 0 1.8rem 1.4rem;
 }
+
+/* ============================================================
+   COVERAGE SECTION (LOCAL GEO-TARGETING)
+   ============================================================ */
+.coverage-section {
+  padding: 100px 0 90px;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.coverage-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.coverage-card.featured {
+  border-color: rgba(255, 62, 165, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 62, 165, 0.1);
+}
+
+.coverage-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 25px rgba(37, 99, 235, 0.15);
+}
+
+.coverage-card-inner {
+  padding: 2.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.coverage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+
+.badge-jakarta {
+  background: rgba(255, 62, 165, 0.15);
+  border: 1px solid rgba(255, 62, 165, 0.4);
+  color: var(--color-pink);
+}
+
+.badge-jabar {
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.4);
+  color: var(--color-blue);
+}
+
+.badge-nasional {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10B981;
+}
+
+.coverage-city {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.coverage-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.coverage-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.coverage-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.coverage-detail-item i {
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.coverage-detail-item strong {
+  display: block;
+  color: #FFFFFF;
+  margin-bottom: 0.2rem;
+  font-size: 0.92rem;
+}
+
+.coverage-detail-item p {
+  color: #CBD5E1;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.coverage-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.9rem 1.4rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--color-pink), #e02888);
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: auto;
+}
+
+.coverage-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 62, 165, 0.4);
+  color: #fff;
+}
+
+.coverage-btn.btn-calc-coverage {
+  background: linear-gradient(135deg, var(--color-blue), #1d4ed8);
+}
+
+.coverage-btn.btn-calc-coverage:hover {
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
